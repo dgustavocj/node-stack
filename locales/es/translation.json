@@ -1,0 +1,152 @@
+{
+  "generic": {
+    "errors": {
+      "pathNotFound": "Ruta \"{{path}}\" no encontrada",
+      "internalServerError": "Error interno del servidor"
+    }
+  },
+  "validations": {
+    "alternatives": {
+      "all": "\"{{label}}\" no coincide con todos los tipos requeridos",
+      "any": "\"{{label}}\" no coincide con ninguno de los tipos permitidos",
+      "match": "\"{{label}}\" no coincide con ninguno de los tipos permitidos",
+      "one": "\"{{label}}\" coincide con más de un tipo permitido",
+      "types": "\"{{label}}\" debe ser uno de \"{{types}}\""
+    },
+    "any": {
+      "custom": "\"{{label}}\" falló la validación personalizada porque \"{{error.message}}\"",
+      "default": "\"{{label}}\" arrojó un error al ejecutar el método predeterminado",
+      "failover": "\"{{label}}\" arrojó un error al ejecutar el método de conmutación por error",
+      "invalid": "\"{{label}}\" contiene un valor no válido",
+      "only": "\"{{label}}\" debe ser uno de \"{{valids}}\"",
+      "ref": "\"{{label}}\" \"{{arg}}\" hace referencia a {{: #ref}} que \"{{reason}}\"",
+      "required": "\"{{label}}\" es obligatorio",
+      "unknown": "\"{{label}}\" no está permitido"
+    },
+    "array": {
+      "base": "\"{{label}}\" debe ser una matriz",
+      "excludes": "\"{{label}}\" contiene un valor excluido",
+      "hasKnown": "\"{{label}}\" no contiene al menos una coincidencia requerida para el tipo {: #patternLabel}",
+      "hasUnknown": "\"{{label}}\" no contiene al menos una coincidencia requerida",
+      "includes": "\"{{label}}\" no coincide con ninguno de los tipos permitidos",
+      "includesRequiredBoth": "\"{{label}}\" no contiene \"{{knownMisses}}\" y \"{{unknownMisses}}\" otros valores obligatorios",
+      "includesRequiredKnowns": "\"{{label}}\" no contiene \"{{knownMisses}}\"",
+      "includesRequiredUnknowns": "\"{{label}}\" no contiene \"{{unknownMisses}}\" valores obligatorios",
+      "length": "\"{{label}}\" debe contener \"{{limit}}\" elementos",
+      "max": "\"{{label}}\" debe contener menos o igual que \"{{limit}}\" elementos",
+      "min": "\"{{label}}\" debe contener al menos \"{{limit}}\" elementos",
+      "orderedLength": "\"{{label}}\" debe contener como máximo \"{{limit}}\" elementos",
+      "sort": "\"{{label}}\" se debe ordenar en \"{{order}}\" orden por \"{{by}}\"",
+      "sort.mismatching": "\"{{label}}\" no se puede ordenar debido a que los tipos no coinciden",
+      "sort.unsupported": "\"{{label}}\" no se puede ordenar debido a que el tipo \"{{type}}\" no es compatible",
+      "sparse": "\"{{label}}\" no debe ser un elemento de matriz disperso",
+      "unique": "\"{{label}}\" contiene un valor duplicado"
+    },
+    "binary": {
+      "base": "\"{{label}}\" debe ser un búfer o una cadena",
+      "length": "\"{{label}}\" debe tener \"{{limit}}\" bytes",
+      "max": "\"{{label}}\" debe ser menor o igual que \"{{limit}}\" bytes",
+      "min": "\"{{label}}\" debe tener al menos \"{{limit}}\" bytes"
+    },
+    "boolean": {
+      "base": "\"{{label}}\" debe ser un booleano"
+    },
+    "date": {
+      "base": "\"{{label}}\" debe ser una fecha válida",
+      "format": "\"{{label}}\" no cuenta con un formato válido",
+      "greater": "\"{{label}}\" debe ser mayor que \"{{limit}}\"",
+      "less": "\"{{label}}\" debe ser menor que \"{{limit}}\"",
+      "max": "\"{{label}}\" debe ser menor o igual que \"{{limit}}\"",
+      "min": "\"{{label}}\" debe ser mayor o igual que \"{{limit}}\"",
+      "format.iso": "Fecha ISO 8601",
+      "format.javascript": "marca de tiempo o número de milisegundos",
+      "format.unix": "marca de tiempo o número de segundos"
+    },
+    "function": {
+      "arity": "\"{{label}}\" debe tener una aridad de \"{{n}}\"",
+      "class": "\"{{label}}\" debe ser una clase",
+      "maxArity": "\"{{label}}\" debe tener una aridad menor o igual a \"{{n}}\"",
+      "minArity": "\"{{label}}\" debe tener una aridad mayor o igual a \"{{n}}\""
+    },
+    "object": {
+      "and": "\"{{label}}\" contiene \"{{presentWithLabels}}\" sin sus pares requeridos \"{{missingWithLabels}}\"",
+      "assert": "\"{{label}}\" no es válido porque {if (# subject.key, `\" `+ # subject.key +` \"falló en` + (#message || \"pasar la prueba de aserción\" ), #mensaje || \"la aserción falló\")}",
+      "base": "\"{{label}}\" debe ser de tipo \"{{type}}\"",
+      "instance": "\"{{label}}\" debe ser una instancia de {{: #type}}",
+      "length": "\"{{label}}\" debe tener \"{{limit}}\" clave(s)",
+      "max": "\"{{label}}\" debe tener menor o igual que \"{{limit}}\" clave(s)",
+      "min": "\"{{label}}\" debe tener al menos \"{{limit}}\" clave(s)",
+      "missing": "\"{{label}}\" debe contener al menos uno de \"{{peersWithLabels}}\"",
+      "nand": "{{: #mainWithLabel}} no debe existir simultáneamente con \"{{peersWithLabels}}\"",
+      "oxor": "\"{{label}}\" contiene un conflicto entre pares exclusivos opcionales \"{{peersWithLabels}}\"",
+      "pattern.match": "\"{{label}}\" claves no coincidieron con los requisitos del patrón",
+      "refType": "\"{{label}}\" debe ser una referencia de Joi",
+      "regex": "\"{{label}}\" debe ser un objeto RegExp",
+      "rename": {
+        "multiple": "\"{{label}}\" no se puede cambiar el nombre de {{: #from}} porque varios cambios de nombre están deshabilitados y otra clave ya fue renombrada a {{: #to}}",
+        "override": "\"{{label}}\" no se puede cambiar el nombre de {{: #from}} porque la anulación está deshabilitada y el objetivo {{: #to}} existe"
+      },
+      "schema": "\"{{label}}\" debe ser un esquema Joi de \"{{type}}\" tipo",
+      "unknown": "\"{{label}}\" no está permitido",
+      "with": "{{: #mainWithLabel}} falta el par requerido {{: #peerWithLabel}}",
+      "without": "{{: #mainWithLabel}} conflicto con el par prohibido {{: #peerWithLabel}}",
+      "xor": "\"{{label}}\" contiene un conflicto entre pares exclusivos \"{{peersWithLabels}\"}"
+    },
+    "number": {
+      "base": "\"{{label}}\" debe ser un número",
+      "greater": "\"{{label}}\" debe ser mayor que \"{{limit}}\"",
+      "infinity": "\"{{label}}\" no puede ser infinito",
+      "integer": "\"{{label}}\" debe ser un número entero",
+      "less": "\"{{label}}\" debe ser menor que \"{{limit}}\"",
+      "max": "\"{{label}}\" debe ser menor o igual que \"{{limit}}\"",
+      "min": "\"{{label}}\" debe ser mayor o igual que \"{{limit}}\"",
+      "multiple": "\"{{label}}\" debe ser un múltiplo de \"{{multiple}}\"",
+      "negative": "\"{{label}}\" debe ser un número negativo",
+      "port": "\"{{label}}\" debe ser un puerto válido",
+      "positive": "\"{{label}}\" debe ser un número positivo",
+      "precision": "\"{{label}}\" no debe tener más de \"{{limit}}\" decimales",
+      "unsafe": "\"{{label}}\" debe ser un número seguro"
+    },
+    "string": {
+      "alphanum": "\"{{label}}\" solo debe contener caracteres alfanuméricos",
+      "base": "\"{{label}}\" debe ser una cadena",
+      "base64": "\"{{label}}\" debe ser una cadena base64 válida",
+      "creditCard": "\"{{label}}\" debe ser una tarjeta de crédito",
+      "dataUri": "\"{{label}}\" debe ser una cadena de dataUri válida",
+      "domain": "\"{{label}}\" debe contener un nombre de dominio válido",
+      "email": "\"{{label}}\" debe ser un correo electrónico válido",
+      "empty": "\"{{label}}\" no puede estar vacío",
+      "guid": "\"{{label}}\" debe ser un GUID válido",
+      "hex": "\"{{label}}\" solo debe contener caracteres hexadecimales",
+      "hexAlign": "\"{{label}}\" la representación decodificada hexadecimal debe estar alineada en bytes",
+      "hostname": "\"{{label}}\" debe ser un nombre de host válido",
+      "ip": "\"{{label}}\" debe ser una dirección IP válida con un \"{{cidr}}\" CIDR",
+      "ipVersion": "\"{{label}}\" debe ser una dirección IP válida de una de las siguientes versiones \"{{version}}\" con un \"{{cidr}}\" CIDR",
+      "isoDate": "\"{{label}}\" debe estar en formato iso",
+      "isoDuration": "\"{{label}}\" debe tener una duración ISO 8601 válida",
+      "length": "\"{{label}}\" la longitud debe tener \"{{limit}}\" caracteres",
+      "lowercase": "\"{{label}}\" solo debe contener caracteres en minúscula",
+      "max": "\"{{label}}\" la longitud debe ser menor o igual a \"{{limit}}\" caracteres de longitud",
+      "min": "\"{{label}}\" la longitud debe tener al menos \"{{limit}}\" caracteres",
+      "normalize": "\"{{label}}\" debe ser Unicode normalizado en el \"{{form}}\" formulario",
+      "token": "\"{{label}}\" solo debe contener caracteres alfanuméricos y subrayados",
+      "pattern": {
+        "base": "\"{{label}}\" con valor \"{{value}}\" no coincide con el patrón requerido: \"{{regex}}\"",
+        "name": "\"{{label}}\" con valor \"{{value}}\" no coincide con el patrón \"{{name}}\"",
+        "invert": {
+          "base": "\"{{label}}\" con valor \"{{value}}\" coincide con el patrón invertido: \"{{regex}}\"",
+          "name": "\"{{label}}\" con valor \"{{value}}\" coincide con el patrón \"{{name}}\" invertido"
+        }
+      },
+      "trim": "\"{{label}}\" no debe tener espacios en blanco al principio o al final",
+      "uri": "\"{{label}}\" debe ser un uri válido",
+      "uriCustomScheme": "\"{{label}}\" debe ser un uri válido con un esquema que coincida con el patrón \"{{scheme}}\"",
+      "uriRelativeOnly": "\"{{label}}\" debe ser un URL relativo válido",
+      "uppercase": "\"{{label}}\" solo debe contener caracteres en mayúsculas"
+    },
+    "symbol": {
+      "base": "\"{{label}}\" debe ser un símbolo",
+      "map": "\"{{label}}\" debe ser uno de \"{{map}}\""
+    }
+  }
+}
