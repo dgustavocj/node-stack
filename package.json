@@ -1,6 +1,6 @@
 {
   "name": "nodejs-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -17,11 +17,8 @@
     "publish:local": "npm run lint && npm run build && yalc publish"
   },
   "keywords": [],
-  "author": {
-		"name": "Gustavo Cuentas Jara",
-		"email": "dgustavocj@gmail.com"
-	},
-  "license": "ISC",
+  "author": "Gustavo Cuentas Jara <dgustavocj@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.6",
     "@types/cors": "^2.8.13",
@@ -137,6 +134,17 @@
     "tslib": "^2.5.0",
     "x-match-expression": "^0.2.1",
     "yaml": "^2.2.1"
-  }
-
+  },
+  "description": "Obtener node-stack con NPM:",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgustavocj/node-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dgustavocj/node-stack/issues"
+  },
+  "homepage": "https://github.com/dgustavocj/node-stack#readme"
 }
