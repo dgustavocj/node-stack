@@ -1,6 +1,6 @@
 {
-  "name": "node-stack",
-  "version": "0.1.0",
+  "name": "nodejs-stack",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
